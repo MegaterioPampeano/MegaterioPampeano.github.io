@@ -1,0 +1,1093 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Silenciar BicC · Del maíz a la chicharrita</title>
+<meta name="description" content="Propuesta de ARN de interferencia entregado por vesículas de Azospirillum brasilense para silenciar BicC en Dalbulus maidis, la chicharrita del maíz.">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css?v=3">
+</head>
+<body>
+
+<div class="progreso" aria-hidden="true"><span id="progreso-barra"></span></div>
+
+<header class="nav" id="nav">
+  <a class="nav-marca" href="#inicio">
+    <span class="nav-punto" aria-hidden="true"></span>
+    <span>BicC <em>/</em> achaparramiento</span>
+  </a>
+  <nav class="nav-links" aria-label="Secciones">
+    <a href="#equipo">Quiénes somos</a>
+    <a href="#problema">Problema</a>
+    <a href="#arni">Antecedentes</a>
+    <a href="#propuesta">Propuesta</a>
+    <a href="#fases">Plan experimental</a>
+    <a href="#sifi">Open Sifi</a>
+    <a href="#fuentes">Referencias</a>
+  </nav>
+  <button class="nav-menu" id="nav-menu" aria-label="Menú" aria-expanded="false">
+    <span></span><span></span>
+  </button>
+</header>
+
+<main>
+
+<!-- ================= HERO ================= -->
+<section class="hero" id="inicio">
+  <div class="hero__text">
+    <p class="kicker">Investigathón 2026 · biotecnología</p>
+    <h1>
+      Del maíz a la chicharrita.<br>
+      De una bacteria<br>
+      al <span class="hl">silencio de un gen</span>.
+    </h1>
+    <p class="intro">
+      Una bacteria que vive dentro del maíz, fabrica ARN de doble cadena y lo entrega en
+      vesículas. La chicharrita lo ingiere sin saberlo. <strong>BicC</strong> se apaga.
+    </p>
+    <div class="hero__cta">
+      <a class="btn btn--solid" href="#propuesta">Ver la propuesta</a>
+      <a class="btn btn--ghost" href="#fases">El plan experimental</a>
+    </div>
+  </div>
+
+  <figure class="hero__figure">
+    <img src="assets/img/dalbulus_vertical.jpg" alt="Chicharrita del maíz, Dalbulus maidis, sobre una hoja" loading="eager">
+    <figcaption>
+      <span>Dalbulus maidis</span>
+      Adulto, 3–4 mm. Foto: Fdy3k / Wikimedia Commons, CC BY-SA 4.0.
+    </figcaption>
+  </figure>
+</section>
+
+<!-- ================= BANDA DE CIFRAS ================= -->
+<section class="band">
+  <div class="band__item"><strong>18 M t</strong><span>de maíz perdidas en la campaña 2023/24</span></div>
+  <div class="band__item"><strong>US$ 2.045 M</strong><span>de impacto económico según la Bolsa de Rosario</span></div>
+  <div class="band__item"><strong>4</strong><span>patógenos que transmite un solo insecto</span></div>
+  <div class="band__item"><strong>300 pb</strong><span>de ARNdc diseñados contra BicC</span></div>
+</section>
+
+<!-- ================= RAIL ================= -->
+<div class="rail" id="rail" aria-hidden="true">
+  <div class="rail-linea"><span id="rail-barra"></span></div>
+  <ol class="rail-pasos">
+    <li data-paso="equipo"><span>01</span>Quiénes somos</li>
+    <li data-paso="problema"><span>02</span>El problema</li>
+    <li data-paso="arni"><span>03</span>ARNi</li>
+    <li data-paso="propuesta"><span>04</span>Recorrido</li>
+    <li data-paso="fases"><span>05</span>Fases</li>
+    <li data-paso="sifi"><span>06</span>Open Sifi</li>
+  </ol>
+</div>
+
+<!-- ================= 05 QUIÉNES SOMOS ================= -->
+<section class="section" id="equipo" data-paso="equipo">
+  <div class="seccion-head reveal">
+    <p class="label">Contexto · quiénes somos</p>
+    <h2>Distintas carreras,<br>las mismas preguntas</h2>
+  </div>
+
+  <div class="equipo-texto reveal">
+    <p>Somos un grupo de estudiantes universitarios interesados en las ciencias y los nuevos
+    descubrimientos. Cada uno de nosotros estudia una carrera distinta y abarca los problemas
+    científicos con una visión diferente, lo que nos permitió abordar nuestras problemáticas
+    desde perspectivas complementarias. Creemos que esa diversidad es una de las herramientas
+    más enriquecedoras que tenemos. Poder presentar y debatir distintos puntos de vista nos
+    permitió encontrar soluciones, pero nos sirvió más aún para hacernos mejores preguntas.</p>
+    <p>Consideramos muy valioso el aprendizaje que surge por asistir a clases y aprender de
+    profesionales que también comparten esta pasión por el aprendizaje constante y la
+    comunicación del mismo, viendo a la ciencia como una actividad que se realiza en comunidad.
+    También valoramos mucho el aprendizaje “horizontal”: aprender de nuestros amigos y de
+    personas que nos vamos cruzando en nuestro camino y que sigue ampliando nuestros horizontes,
+    colaborando hacia soluciones colectivas basadas en la escucha.</p>
+    <p class="firma">En esta página dejamos una leve parte de nuestro recorrido en este proyecto;
+    esperamos haber plasmado nuestras ideas y visiones sobre la ciencia.</p>
+  </div>
+
+  <!-- orden de fotos: 1 Martina · 2 Lucía · 3 Martín · 5 Mariano · 4 grupal -->
+  <div class="equipo-cards" id="galeria">
+    <figure class="persona reveal">
+      <img src="assets/img/equipo-1.jpg" alt="Martina, integrante del equipo" loading="lazy" width="1050" height="1400">
+      <figcaption>
+        <div class="persona-nombre"><strong>Martina</strong><span class="inst">UNSAM</span></div>
+        <span class="carrera">Desarrollo experimental</span>
+        <span class="aporte">construcción genética, ARNdc, entrega</span>
+      </figcaption>
+    </figure>
+    <figure class="persona reveal" data-delay="1">
+      <img src="assets/img/equipo-2.jpg" alt="Lucía, integrante del equipo" loading="lazy" width="788" height="1400">
+      <figcaption>
+        <div class="persona-nombre"><strong>Lucía</strong><span class="inst">UBA</span></div>
+        <span class="carrera">Biología molecular</span>
+        <span class="aporte">cultivos, biología del insecto, ensayos</span>
+      </figcaption>
+    </figure>
+    <figure class="persona reveal" data-delay="2">
+      <img src="assets/img/equipo-3.jpg" alt="Martín, integrante del equipo" loading="lazy" width="720" height="1280">
+      <figcaption>
+        <div class="persona-nombre"><strong>Martín</strong><span class="inst">UBA</span></div>
+        <span class="carrera">Matemática</span>
+        <span class="aporte">formalización, estadística, lectura de resultados</span>
+      </figcaption>
+    </figure>
+    <figure class="persona reveal" data-delay="3">
+      <img src="assets/img/equipo-5.jpg" alt="Mariano, integrante del equipo" loading="lazy" width="1050" height="1400">
+      <figcaption>
+        <div class="persona-nombre"><strong>Mariano</strong><span class="inst">UBA</span></div>
+        <span class="carrera">Física</span>
+        <span class="aporte">informática, bioinformática e inteligencia artificial: software y análisis de datos</span>
+      </figcaption>
+    </figure>
+  </div>
+
+  <figure class="foto-grupal reveal">
+    <img src="assets/img/equipo-4.jpg" alt="Foto grupal del equipo" loading="lazy" width="1400" height="788">
+    <figcaption>Los cuatro, Investigathón 2026</figcaption>
+  </figure>
+
+</section>
+
+<!-- ================= 01 PROBLEMA ================= -->
+<section class="section section--dark" id="problema" data-paso="problema">
+  <div class="seccion-head reveal">
+    <p class="label">Contexto · el vector</p>
+    <h2>Un insecto pequeño<br>con mucho impacto</h2>
+    <p class="intro">
+      <em>Dalbulus maidis</em>, la chicharrita del maíz, mide pocos milímetros. Completa su ciclo
+      de vida únicamente en plantas del género <em>Zea</em> —maíz y teosintes— y se alimenta de sus
+      tejidos vasculares. Además de ser vector de patógenos, daña al cultivo por su alimentación
+      y su oviposición.
+    </p>
+  </div>
+
+  <div class="cols">
+    <article class="card reveal">
+      <h3>Lo que transporta</h3>
+      <ul class="patogenos">
+        <li><span class="tag">CSS</span><strong>Spiroplasma kunkelii</strong><small>bacteria sin pared celular · el principal patógeno en Argentina</small></li>
+        <li><span class="tag">MBSP</span><strong>Maize bushy stunt phytoplasma</strong><small>fitoplasma</small></li>
+        <li><span class="tag">MRFV</span><strong>Maize rayado fino virus</strong><small>virus</small></li>
+        <li><span class="tag">MSMV</span><strong>Maize striate mosaic virus</strong><small>virus</small></li>
+      </ul>
+      <p class="nota">
+        Cuatro patógenos identificados, que pueden aparecer solos o combinados.
+      </p>
+    </article>
+
+    <article class="card reveal" data-delay="1">
+      <h3>Cómo se transmite</h3>
+      <p>La chicharrita se infecta al alimentarse de los tejidos vasculares de una planta
+      enferma, un proceso que puede completarse en pocas horas.</p>
+      <p>La transmisión es <strong>persistente, circulativa y propagativa</strong>: el insecto no
+      sólo transporta al patógeno, lo mantiene y amplifica sus cantidades dentro de su propio
+      organismo. No se ha reportado difusión de estos patógenos por semilla.</p>
+    </article>
+  </div>
+
+  <div class="card sintomas-caja reveal">
+    <h3>Lo que se ve en la planta</h3>
+    <ul class="sintomas dos-columnas">
+      <li>Punteado y rayas cloróticas finas a lo largo de las nervaduras</li>
+      <li>Bandas cloróticas desde la base de la hoja</li>
+      <li>Enrojecimiento y entrenudos cortos</li>
+      <li>Macollamiento excesivo</li>
+      <li>Espigas estériles o pequeñas</li>
+      <li>Mosaico y estrías cloróticas</li>
+    </ul>
+    <p class="nota">Las plantas enfermas finalizan su ciclo anticipadamente y se interrumpe el
+    llenado de la mazorca. La etapa del cultivo en que ocurre la infección es decisiva: en los
+    maíces de siembra tardía, la planta aún pequeña es muy susceptible cuando llega el vector.</p>
+  </div>
+
+  <!-- gráfico de pérdidas -->
+  <figure class="figura reveal" id="fig-perdidas">
+    <figcaption>
+      <span class="fig-titulo">Cómo creció la estimación de pérdidas · campaña 2023/24</span>
+      <span class="fig-fuente">millones de toneladas, según estimaciones sucesivas · Bolsa de Comercio de Rosario</span>
+    </figcaption>
+    <div class="grafico" role="img" aria-label="La estimación de pérdidas creció de 2,5 a 18 millones de toneladas">
+      <div class="grafico-escala" aria-hidden="true">
+        <span>0</span><span>5</span><span>10</span><span>15</span><span>20 Mt</span>
+      </div>
+      <div class="barras" id="barras-perdidas">
+        <div class="barra" data-valor="2.5"><div class="pista"><div class="barra-relleno"></div><span class="barra-valor">2,5</span></div><span class="barra-label">primeras semanas</span></div>
+        <div class="barra" data-valor="4.5"><div class="pista"><div class="barra-relleno"></div><span class="barra-valor">4,5</span></div><span class="barra-label">avance de campaña</span></div>
+        <div class="barra" data-valor="6.5"><div class="pista"><div class="barra-relleno"></div><span class="barra-valor">más de 6,5</span></div><span class="barra-label">relevamientos</span></div>
+        <div class="barra" data-valor="10"><div class="pista"><div class="barra-relleno"></div><span class="barra-valor">≈ 10</span></div><span class="barra-label">cierre de estimaciones</span></div>
+        <div class="barra destacada" data-valor="18"><div class="pista"><div class="barra-relleno"></div><span class="barra-valor">18</span></div><span class="barra-label">contra el potencial</span></div>
+      </div>
+    </div>
+    <p class="fig-pie">
+      49 millones de toneladas cosechadas frente a las 67 que se habrían podido alcanzar.
+      El impacto no fue uniforme: en el norte los rindes cayeron entre 50 y 70 %, con pérdidas
+      de área de 25 a 60 %, especialmente en Chaco y Santiago del Estero. En el sur y
+      centro-norte de Córdoba —28 % del maíz nacional— el 92 % se siembra de forma tardía.
+    </p>
+  </figure>
+
+  <div class="cols">
+    <article class="card reveal">
+      <h3>El costo, según quién lo mida</h3>
+      <p>Una estimación temprana de la Bolsa de Comercio de Rosario habló de
+      <strong>US$ 2.045 millones</strong>. La Bolsa de Cereales de Córdoba calculó unos
+      <strong>US$ 5.700 millones</strong>, aunque esa cifra se presenta junto con la caída de los
+      precios internacionales.</p>
+    </article>
+    <article class="card reveal" data-delay="1">
+      <h3>Un “cisne negro”</h3>
+      <p>Hasta 2023/24 el problema parecía acotado al norte del país. Un especialista en plagas
+      relató que, en más de 25 años recorriendo cultivos, la presencia de la chicharrita había
+      sido muy poco frecuente. Esa campaña llegó a zonas donde nunca había llegado, y el sector
+      la describió como un cisne negro.</p>
+      <p class="nota">Fuente: Bichos de Campo · Forbes Argentina.</p>
+    </article>
+  </div>
+
+  <!-- timeline -->
+  <details class="contexto reveal">
+    <summary>El contexto en datos: campañas, monitoreo y manejo</summary>
+    <div class="contexto-cuerpo">
+<div class="timeline compacta reveal" id="timeline">
+    <h3 class="timeline-titulo">Contexto: cuatro campañas</h3>
+    <ol class="timeline-lista">
+      <li><span class="tl-campania">2023/24</span><h4>Cisne negro</h4>
+        <p>Hasta 18 Mt menos; US$ 2.045 a 5.700 M.</p></li>
+      <li><span class="tl-campania">2024/25</span><h4>Respuesta coordinada</h4>
+        <p>Tras nueve campañas de crecimiento del área se proyectó una caída del 21 %; la siembra
+        bajó 24 % y nació la Red Nacional de Monitoreo.</p></li>
+      <li><span class="tl-campania">2025/26</span><h4>Récord sin vector</h4>
+        <p>64 Mt, récord histórico. Las pérdidas de esa campaña fueron por sequías e inundaciones, no
+        por el vector.</p></li>
+      <li class="actual"><span class="tl-campania">2026/27</span><h4>Presión alta</h4>
+        <p>67 % de las localidades del NOA arriba de 100 adultos por trampa; el promedio regional pasó
+        de 128 a 315 individuos.</p></li>
+    </ol>
+  </div>
+
+  <div class="cols">
+    <article class="card reveal">
+      <h3>El invierno no lo frenó</h3>
+      <p>La Red Nacional de Monitoreo —coordinada por Maizar junto con Aapresid, CREA, INTA y otras
+      instituciones— elaboró 21 informes entre mayo de 2024 y junio de 2025, con datos de unas 500
+      trampas en 14 provincias.</p>
+      <p>De cara a 2026/27 el insecto sigue presente en más del 90 % de las zonas endémicas, y
+      las plantas de maíz voluntarias funcionan como un “puente verde” entre campañas.</p>
+      <p>El frío sí redujo las poblaciones: las capturas superiores a 50 adultos por trampa
+      bajaron del 35 % al 17 % en el informe de junio de 2026. El desafío, según la coordinación
+      de la Red, es mantener el impacto sobre la espiga por debajo del 10 %.</p>
+    </article>
+    <article class="card reveal" data-delay="1">
+      <h3>Las herramientas de hoy y sus límites</h3>
+      <p>Control del maíz guacho, elección de híbridos y respeto de las fechas de siembra, junto
+      con semillas tratadas con neonicotinoides y diamidas, y un control químico que el INTA
+      recomienda sólo como complemento. En 2024 se aprobaron un insecticida foliar y uno para
+      tratamiento de semillas que protegen hasta el estadio V8, en el mejor de los casos.</p>
+      <p class="nota">Ensayos de la EEAOC indicaron que el control foliar no resultaría efectivo
+      con alta presencia de la plaga, y en el recurado de semillas algunos híbridos mostraron
+      menor poder germinativo con ciertas dosis de imidacloprid. La bibliografía advierte además
+      sobre el efecto en polinizadores y la aparición de resistencia.</p>
+    </article>
+  </div>
+    </div>
+  </details>
+</section>
+
+<!-- ================= 02 ARNi ================= -->
+<section class="section" id="arni" data-paso="arni">
+  <div class="seccion-head reveal">
+    <p class="label">03 · el mecanismo</p>
+    <h2>Las células ya saben defenderse.<br>Sólo hay que darles la instrucción</h2>
+    <p class="intro">
+      Las células eucariotas poseen mecanismos de defensa endógenos. Uno de ellos es la
+      interferencia por ARN, y su desencadenamiento requiere la presencia de ARN de doble cadena.
+    </p>
+  </div>
+
+  <div class="diagrama reveal">
+    <svg viewBox="0 0 980 300" role="img" aria-label="ARNdc es procesado por Dicer en ARNsi de 21 nucleótidos, que se asocia a Argonauta y guía el silenciamiento del gen diana">
+      <defs>
+        <linearGradient id="hebra" x1="0" x2="1">
+          <stop offset="0" stop-color="#c8f169"/><stop offset="1" stop-color="#f5e663"/>
+        </linearGradient>
+        <marker id="punta" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+          <path d="M0 0 L10 5 L0 10 z" fill="#c8f169"/>
+        </marker>
+      </defs>
+      <g class="dg-nodo">
+        <path d="M40 120 q30 -30 60 0 q30 30 60 0 q30 -30 60 0" fill="none" stroke="url(#hebra)" stroke-width="4"/>
+        <path d="M40 140 q30 30 60 0 q30 -30 60 0 q30 30 60 0" fill="none" stroke="url(#hebra)" stroke-width="4" opacity=".55"/>
+        <text x="100" y="185" class="dg-titulo">ARNdc</text>
+        <text x="100" y="205" class="dg-sub">doble cadena</text>
+      </g>
+      <path class="dg-flecha" d="M235 130 h55" marker-end="url(#punta)"/>
+      <g class="dg-nodo">
+        <circle cx="330" cy="130" r="34" fill="#12492e" stroke="#c8f169" stroke-width="1.5"/>
+        <text x="330" y="136" class="dg-chip">Dicer</text>
+        <text x="330" y="185" class="dg-titulo">procesamiento</text>
+        <text x="330" y="205" class="dg-sub">ribonucleasas III (DCL)</text>
+      </g>
+      <path class="dg-flecha" d="M385 130 h55" marker-end="url(#punta)"/>
+      <g class="dg-nodo">
+        <rect x="450" y="112" width="70" height="8" rx="4" fill="url(#hebra)"/>
+        <rect x="450" y="126" width="70" height="8" rx="4" fill="url(#hebra)" opacity=".5"/>
+        <text x="485" y="185" class="dg-titulo">ARNsi</text>
+        <text x="485" y="205" class="dg-sub">~21 nt</text>
+      </g>
+      <path class="dg-flecha" d="M540 130 h55" marker-end="url(#punta)"/>
+      <g class="dg-nodo">
+        <circle cx="640" cy="130" r="38" fill="#12492e" stroke="#f5e663" stroke-width="1.5"/>
+        <text x="640" y="127" class="dg-chip">AGO</text>
+        <text x="640" y="143" class="dg-chip chico">RISC</text>
+        <text x="640" y="190" class="dg-titulo">complejo activo</text>
+        <text x="640" y="210" class="dg-sub">Argonauta + ARNsi</text>
+      </g>
+      <path class="dg-flecha" d="M690 130 h55" marker-end="url(#punta)"/>
+      <g class="dg-nodo">
+        <rect x="760" y="120" width="80" height="10" rx="5" fill="#3c6b53"/>
+        <rect x="858" y="120" width="82" height="10" rx="5" fill="#3c6b53"/>
+        <path d="M845 100 l10 20 l-10 20" stroke="#f5e663" stroke-width="2" fill="none"/>
+        <text x="850" y="175" class="dg-titulo">gen diana</text>
+        <text x="850" y="195" class="dg-sub">expresión apagada</text>
+      </g>
+    </svg>
+    <p class="nota centro-texto">
+      El ARNdc es procesado por enzimas de tipo ribonucleasas III denominadas Dicer (DCL), que
+      generan ARNsi de aproximadamente <strong>21 nucleótidos</strong>. Esos ARNsi se asocian con
+      proteínas Argonauta (AGO), que poseen actividad catalítica, conformando el complejo de
+      silenciamiento inducido por ARN. Su actividad conduce al silenciamiento de la expresión del
+      gen diana.
+    </p>
+  </div>
+
+  <div class="grid-tres">
+    <article class="mini reveal">
+      <h4>Tres vías</h4>
+      <p>El silenciamiento puede darse por modificación de la cromatina, degradación del ARNm o
+      inhibición de la traducción del mismo.</p>
+    </article>
+    <article class="mini reveal" data-delay="1">
+      <h4>Un precedente comercial</h4>
+      <p>En diciembre de 2023 la EPA registró el primer biopesticida de ARNdc rociable para un
+      cultivo alimenticio, dirigido al escarabajo de la papa. Según la empresa, incluso a cien
+      veces la dosis de uso no afectó a las demás especies evaluadas.</p>
+    </article>
+    <article class="mini reveal" data-delay="2">
+      <h4>Los desafíos reales</h4>
+      <p>Costo de producción del ARNdc, su entrega, su estabilidad ambiental, la absorción
+      variable por parte del insecto y la poca capacidad de extrapolación entre sistemas
+      diferentes.</p>
+    </article>
+  </div>
+
+  <div class="puente reveal">
+    <p>Nuestra propuesta apunta a un desarrollo biotecnológico basado en las fortalezas del
+    modelo y centrado en la prueba experimental de los estudios que quedan por realizar. Para eso pensamos en una bacteria endófita del maíz —<em>Azospirillum
+    brasilense</em>— que produce el ARNdc y lo entrega dentro de vesículas, con el objetivo de
+    silenciar el gen <strong>BicC</strong>, involucrado en la reproducción de la chicharrita.</p>
+  </div>
+</section>
+
+<!-- ================= 03 RECORRIDO / PROPUESTA ================= -->
+<section class="section propuesta" id="propuesta" data-paso="propuesta">
+  <div class="seccion-head reveal">
+    <p class="sello">Nuestra propuesta</p>
+    <h2>Una bacteria del maíz<br>que apaga un gen del insecto</h2>
+    <p class="intro">
+      <em>Azospirillum brasilense</em> Az39, endófita del maíz, lleva el ARNdc hasta el floema
+      dentro de vesículas de membrana. La chicharrita lo ingiere al alimentarse, el ARN entra a
+      sus células y BicC deja de expresarse.
+    </p>
+  </div>
+
+  <div class="tesis reveal">
+    <p class="tesis-frase">El ARN no se rocía: viaja dentro de una bacteria que ya vive en la
+    planta, protegido por una membrana, hasta el intestino del insecto.</p>
+    <ul class="tesis-puntos">
+      <li><span>Endófita</span> Az39 coloniza el maíz y llega al sistema vascular sin ayuda
+      externa.</li>
+      <li><span>Protegido</span> la vesícula mantiene el ARNdc fuera del alcance de las ARNasas
+      del ambiente y de la planta.</li>
+      <li><span>Específico</span> el silenciamiento depende de la secuencia: se apunta a BicC y
+      no a otro gen.</li>
+    </ul>
+  </div>
+
+  <div class="etapas">
+
+    <!-- ETAPA 1 -->
+    <article class="etapa reveal">
+      <div class="etapa-num-lateral"><span>Etapa</span><strong>01</strong></div>
+      <div class="etapa-cuerpo">
+        <h3>La bacteria fabrica el ARNdc</h3>
+        <p class="etapa-sub">Az39 · construcción del casete</p>
+        <p>Se construye el fragmento de <strong>BicC</strong> con un promotor a cada lado junto a
+        los terminadores, y se ensamblan los componentes por Golden Gate o Gibson. El
+        procedimiento se hace en <em>E. coli</em> y después, por conjugación, se traslada a
+        <strong>Az39</strong>. La selección se hace por resistencia a antibióticos: sobreviven
+        sólo las que poseen el plásmido, y al usar un medio no apto para <em>E. coli</em> esas no
+        proliferan, así que quedan únicamente las Az39 transconjugantes.</p>
+        <div class="exp">
+          <span class="exp-tag">Control 1</span>
+          <p><strong>Verificar la producción de ARNdc.</strong> Tres muestras: cepa no modificada
+          (wild), modificada sin inductor y modificada con inductor. Gel de agarosa de los ARN de
+          cada muestra, con una ARNasa que degrada simple pero no doble. Se debería ver una única
+          banda fuerte de <strong>300 pb</strong> en la modificada con IPTG; en las otras puede
+          haber banda, pero más tenue y no acentuada en ese peso molecular.</p>
+        </div>
+      </div>
+      <figure class="etapa-esquema">
+        <svg viewBox="0 0 380 300" role="img" aria-label="Plásmido con el casete de BicC dentro de la bacteria, que produce ARNdc">
+          <defs>
+            <marker id="p1" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+              <path d="M0 0 L10 5 L0 10 z" fill="#c8f169"/>
+            </marker>
+          </defs>
+          <ellipse cx="130" cy="150" rx="92" ry="58" fill="#0f2c1e" stroke="#c8f169" stroke-width="1.6"/>
+          <ellipse cx="130" cy="150" rx="92" ry="58" fill="none" stroke="#c8f169" stroke-width="1.6" stroke-dasharray="3 6" opacity=".35"/>
+          <path d="M78 128 a34 22 0 1 1 4 40" fill="none" stroke="#f5e663" stroke-width="2.4"/>
+          <rect x="86" y="126" width="18" height="7" rx="3.5" fill="#c8f169"/>
+          <text x="130" y="228" class="esq-titulo">Az39 + plásmido</text>
+          <text x="130" y="246" class="esq-sub">promotor · BicC · terminador</text>
+          <path class="dg-flecha" d="M232 150 h40" marker-end="url(#p1)"/>
+          <g transform="translate(292 132)">
+            <path d="M0 0 q16 -14 32 0 q16 14 32 0" fill="none" stroke="#c8f169" stroke-width="3"/>
+            <path d="M0 18 q16 14 32 0 q16 -14 32 0" fill="none" stroke="#c8f169" stroke-width="3" opacity=".55"/>
+          </g>
+          <text x="306" y="212" class="esq-titulo">ARNdc</text>
+          <text x="306" y="230" class="esq-sub">300 pb</text>
+        </svg>
+      </figure>
+    </article>
+
+    <!-- ETAPA 2 -->
+    <article class="etapa reveal">
+      <div class="etapa-num-lateral"><span>Etapa</span><strong>02</strong></div>
+      <div class="etapa-cuerpo">
+        <h3>La bacteria libera vesículas con el ARN adentro</h3>
+        <p class="etapa-sub">OMVs · aislamiento y caracterización</p>
+        <p>Se analiza que la bacteria libere las vesículas y que éstas lleven el ARNdc adentro.
+        Se aíslan por filtración y ultracentrifugación, hasta formar el pellet. Se concentra por
+        <strong>NTA</strong> (seguimiento por nanopartículas) y se analiza la morfología por
+        microscopía electrónica para comparar tamaños y formas y evaluar homogeneidad. Eso
+        permite estimar cuánto ARNdc entra a cada vesícula en promedio.</p>
+        <div class="exp">
+          <span class="exp-tag">Control 2</span>
+          <p><strong>Verificación de encapsulamiento.</strong> Tres muestras —wild, modificada
+          tratada con ARNasa y modificada tratada con detergente y ARNasa— corridas en gel. Se
+          debería ver banda marcada en las dos primeras. La primera confirma que el ARN estaba
+          presente; la segunda, que estaba dentro de la OMV; la tercera demuestra que sin la
+          membrana el ARN se degrada. También se puede sumar una muestra con ARNdc solo, sin
+          vesículas, para verificar que la ARNasa lo degrada.</p>
+        </div>
+      </div>
+      <figure class="etapa-esquema">
+        <svg viewBox="0 0 380 300" role="img" aria-label="Vesícula de membrana externa brotando de la bacteria con hebras de ARNdc en su interior">
+          <circle cx="150" cy="150" r="66" fill="#0f2c1e" stroke="#2f7d4f" stroke-width="1.6"/>
+          <circle cx="150" cy="150" r="50" fill="none" stroke="#2f7d4f" stroke-width="1" opacity=".5"/>
+          <g stroke="#c8f169" stroke-width="2.4" fill="none">
+            <path d="M126 138 q10 -8 20 0 q10 8 20 0"/>
+            <path d="M126 158 q10 8 20 0 q10 -8 20 0"/>
+          </g>
+          <path d="M196 116 a46 46 0 0 1 34 46" stroke="#f5e663" stroke-width="1.6" fill="none" stroke-dasharray="4 5"/>
+          <circle cx="268" cy="126" r="30" fill="#12492e" stroke="#c8f169" stroke-width="1.6"/>
+          <g stroke="#f5e663" stroke-width="2" fill="none">
+            <path d="M256 120 q6 -5 12 0 q6 5 12 0"/>
+            <path d="M256 132 q6 5 12 0 q6 -5 12 0"/>
+          </g>
+          <text x="268" y="180" class="esq-titulo">OMV</text>
+          <text x="268" y="198" class="esq-sub">membrana + ARNdc</text>
+          <text x="150" y="244" class="esq-titulo">bacteria</text>
+          <text x="150" y="262" class="esq-sub">filtración → ultracentrífuga → NTA</text>
+        </svg>
+      </figure>
+    </article>
+
+    <!-- ETAPA 3 -->
+    <article class="etapa reveal">
+      <div class="etapa-num-lateral"><span>Etapa</span><strong>03</strong></div>
+      <div class="etapa-cuerpo">
+        <h3>El maíz la transporta y la chicharrita la come</h3>
+        <p class="etapa-sub">planta · floema y xilema</p>
+        <p>La bacteria coloniza la planta y las vesículas llegan al sistema vascular, que es
+        justamente donde la chicharrita se alimenta. Se estudia la planta en condiciones
+        <strong>gnotobióticas axénicas</strong> —libre de microorganismos verificables—, se
+        cuantifica la colonización con nuestras bacterias y se detecta la presencia de OMVs en
+        floema y xilema.</p>
+        <div class="exp">
+          <span class="exp-tag">Control 3</span>
+          <p><strong>Presencia de la bacteria en el tejido vascular.</strong> Mediante UFC —unidad
+          formadora de colonia— se toman muestras cada cierta cantidad de días y, con un marcador
+          fluorescente (se suele usar GFP), se ve si la cantidad aumenta o no. Se espera un
+          gráfico con UFC creciendo de forma exponencial en el tiempo, contra una planta wild sin
+          tratamiento como control.</p>
+        </div>
+      </div>
+      <figure class="etapa-esquema">
+        <svg viewBox="0 0 380 300" role="img" aria-label="Planta de maíz con bacterias en la raíz y vesículas subiendo por el floema hasta la chicharrita">
+          <path d="M110 250 C110 190 106 130 110 56" stroke="#7fbf6a" stroke-width="6" fill="none" stroke-linecap="round"/>
+          <path d="M110 170 C70 150 46 120 34 88" stroke="#7fbf6a" stroke-width="4" fill="none" stroke-linecap="round"/>
+          <path d="M110 148 C150 126 176 104 190 74" stroke="#7fbf6a" stroke-width="4" fill="none" stroke-linecap="round"/>
+          <ellipse cx="30" cy="80" rx="30" ry="11" fill="#2f7d4f" opacity=".7" transform="rotate(-34 30 80)"/>
+          <ellipse cx="196" cy="66" rx="30" ry="11" fill="#2f7d4f" opacity=".7" transform="rotate(30 196 66)"/>
+          <path d="M110 250 C92 272 74 284 58 294 M110 250 C130 274 148 286 166 296" stroke="#6b8f4e" stroke-width="2" fill="none"/>
+          <g fill="#f5e663">
+            <ellipse cx="70" cy="282" rx="5" ry="2.6" transform="rotate(-20 70 282)"/>
+            <ellipse cx="146" cy="284" rx="5" ry="2.6" transform="rotate(18 146 284)"/>
+            <ellipse cx="108" cy="290" rx="5" ry="2.6"/>
+          </g>
+          <g fill="none" stroke="#c8f169" stroke-width="1.4">
+            <circle cx="111" cy="200" r="6"/><circle cx="108" cy="160" r="6"/><circle cx="112" cy="118" r="6"/>
+          </g>
+          <path class="dg-flecha" d="M124 96 C160 88 186 104 206 126" marker-end="url(#p1)"/>
+          <g>
+            <ellipse cx="272" cy="140" rx="44" ry="24" fill="#12492e" stroke="#c8f169" stroke-width="1.3"/>
+            <path d="M312 132 l26 -10 l-4 11 l22 3 l-22 5 l4 10 z" fill="#12492e" stroke="#c8f169"/>
+            <circle cx="242" cy="134" r="4" fill="#f5e663"/>
+            <path d="M258 118 l-9 -17 M282 118 l6 -18" stroke="#c8f169" stroke-width="1.2"/>
+            <path d="M240 156 l-14 15 M266 162 l-4 17 M288 160 l9 15" stroke="#c8f169" stroke-width="1.2"/>
+          </g>
+          <text x="272" y="196" class="esq-titulo">D. maidis</text>
+          <text x="110" y="34" class="esq-sub centro-esq">floema / xilema</text>
+        </svg>
+      </figure>
+    </article>
+
+    <!-- ETAPA 4 -->
+    <article class="etapa reveal">
+      <div class="etapa-num-lateral"><span>Etapa</span><strong>04</strong></div>
+      <div class="etapa-cuerpo">
+        <h3>El ARNdc apaga BicC</h3>
+        <p class="etapa-sub">insecto · ingestión y silenciamiento</p>
+        <p>Con el ARNdc adentro del insecto, la maquinaria de interferencia hace el resto: el
+        complejo Argonauta reconoce el mensaje de BicC y lo corta. BicC está involucrado en la
+        reproducción de la chicharrita, así que apagarlo no mata al insecto: le quita la
+        capacidad de multiplicarse.</p>
+        <p>Las muestras se toman unas horas después de que las chicharritas comieron, de tejido
+        del intestino y del ovario, y se procesan por RT-qPCR junto con ARNasa A en condiciones
+        de alta concentración salina, para quedarse sólo con el ARNdc y no con el ARN que ya se
+        usa para proteína.</p>
+        <div class="exp">
+          <span class="exp-tag">Control 4</span>
+          <p><strong>Se ingiere y se silencia.</strong> Cinco grupos de plantas —wild type;
+          inoculadas con Az39 sin transformar; con Az39 que forma OMVs pero sin ARNdc; con un
+          ARNdc distinto de BicC que sabemos que no daña a la chicharrita; y con Az39 completa
+          (más una variante opcional con ARNdc libre de BicC). Por gel, sólo debería dar positivo
+          el tratamiento. Para el silenciamiento: se extraen proteínas de ovario o de insecto
+          entero, se separan por SDS-PAGE, se transfieren a membrana y se incuban con anticuerpo
+          anti-BicC. Se esperan bandas en todos los carriles pero mucho más tenue en el de la
+          planta completa, y bandas iguales al repetir con un anticuerpo contra una proteína
+          random, para confirmar que se cargó lo mismo en todos los carriles.</p>
+        </div>
+      </div>
+      <figure class="etapa-esquema">
+        <svg viewBox="0 0 380 300" role="img" aria-label="Dentro de la célula del insecto, el complejo RISC corta el ARNm de BicC">
+          <rect x="30" y="46" width="320" height="200" rx="20" fill="#0f2c1e" stroke="#2f7d4f"/>
+          <circle cx="118" cy="126" r="34" fill="#12492e" stroke="#f5e663" stroke-width="1.5"/>
+          <text x="118" y="124" class="esq-chip">AGO</text>
+          <text x="118" y="140" class="esq-chip chico">RISC</text>
+          <path d="M152 126 h44" stroke="#c8f169" stroke-width="1.4" stroke-dasharray="4 5"/>
+          <rect x="200" y="120" width="60" height="8" rx="4" fill="#3c6b53"/>
+          <rect x="268" y="120" width="52" height="8" rx="4" fill="#3c6b53"/>
+          <path d="M258 104 l8 16 l-8 16" stroke="#f5e663" stroke-width="2" fill="none"/>
+          <text x="262" y="98" class="esq-sub centro-esq">ARNm BicC cortado</text>
+          <g fill="none" stroke="#c8f169" stroke-width="1.4" opacity=".8">
+            <circle cx="86" cy="196" r="6"/><circle cx="120" cy="204" r="6"/><circle cx="154" cy="196" r="6"/>
+          </g>
+          <text x="120" y="232" class="esq-sub centro-esq">siRNA que llegan por la savia</text>
+          <text x="286" y="214" class="esq-titulo centro-esq">menos descendencia</text>
+          <text x="190" y="272" class="esq-sub centro-esq">ovario · intestino</text>
+        </svg>
+      </figure>
+    </article>
+
+  </div>
+
+  <figure class="figura-recorrido reveal">
+    <div class="figura-marco">
+      <img src="assets/img/recorrido-figura.jpg"
+           srcset="assets/img/recorrido-figura.jpg 652w, assets/img/recorrido-figura@2x.jpg 1304w"
+           sizes="(max-width: 860px) 92vw, 560px"
+           alt="Infografía del recorrido: entrega de OMVs con ARNdc en el floema, absorción en el intestino y silenciamiento de BicC en el ovario"
+           loading="lazy" width="652" height="1280">
+    </div>
+    <figcaption>
+      <strong>El recorrido completo.</strong> Las bacterias liberan las vesículas en el tejido
+      vascular, la chicharrita las ingiere al alimentarse, las vesículas se fusionan con el
+      enterocito y el ARNdc pasa a la hemolinfa. En el ovario se procesa a ARNsi y el complejo
+      RISC corta el ARNm de BicC: el ovario no completa su desarrollo y la oviposición cae.
+      <button class="zoom" data-img="assets/img/recorrido-figura@2x.jpg">Ampliar</button>
+    </figcaption>
+  </figure>
+
+  <div class="aplicacion reveal">
+    <h3>Aplicación: cómo llegaría al lote</h3>
+    <p>Inocular la bacteria transformada por la semilla o por la raíz, para que permanezca en el
+    floema y sea ingerida desde ahí. La ventaja es que resuelve la persistencia y la entrega a
+    través del floema en un solo paso. La dificultad es que exige diseñar un nuevo chasis
+    bacteriano y realizar experimentos de laboratorio para probar efectividad y bioseguridad.</p>
+  </div>
+</section>
+
+<!-- ================= 04 FASES ================= -->
+<section class="section" id="fases" data-paso="fases">
+  <div class="seccion-head reveal">
+    <p class="sello sello--plan">Plan experimental</p>
+    <h2>Cuatro fases,<br>de la molécula al lote</h2>
+    <p class="intro">
+      Confeccionamos la propuesta en cuatro fases basadas en el análisis de las vías principales
+      de la investigación: análisis molecular (sobre el ARNdc, las OMVs y las secuencias
+      elegidas), análisis vegetal, análisis animal (la chicharrita y sus sistemas internos) y
+      análisis de bioseguridad.
+    </p>
+  </div>
+
+  <div class="plan reveal" id="fases-lista">
+    <div class="plan-tabs" role="tablist" aria-label="Fases del plan experimental">
+      <button class="plan-tab activo" role="tab" id="plan-t1" aria-controls="plan-p1" aria-selected="true" tabindex="0" data-i="0">
+        <span class="plan-num">Fase 1</span>
+        <span class="plan-nombre">ARNdc y OMVs</span>
+      </button>
+      <button class="plan-tab" role="tab" id="plan-t2" aria-controls="plan-p2" aria-selected="false" tabindex="-1" data-i="1">
+        <span class="plan-num">Fase 2</span>
+        <span class="plan-nombre">Planta</span>
+      </button>
+      <button class="plan-tab" role="tab" id="plan-t3" aria-controls="plan-p3" aria-selected="false" tabindex="-1" data-i="2">
+        <span class="plan-num">Fase 3</span>
+        <span class="plan-nombre">Insecto</span>
+      </button>
+      <button class="plan-tab" role="tab" id="plan-t4" aria-controls="plan-p4" aria-selected="false" tabindex="-1" data-i="3">
+        <span class="plan-num">Fase 4</span>
+        <span class="plan-nombre">Bioseguridad</span>
+      </button>
+    </div>
+    <div class="plan-paneles">
+    <section class="plan-panel activo" id="plan-p1" role="tabpanel" aria-labelledby="plan-t1">
+      <h3>ARNdc, secuencias génicas y OMVs</h3>
+      <p class="fase-sub">estudios en laboratorio, in vitro e in silico</p>
+<ul class="lista-check">
+          <li>Construcción del casete génico: fragmento de BicC con promotor a cada lado y terminadores</li>
+          <li>Ensamblado por Golden Gate o Gibson en <em>E. coli</em>, traslado a Az39 por conjugación</li>
+          <li>Selección de transconjugantes por resistencia a antibióticos, en medio no apto para <em>E. coli</em></li>
+          <li>Aislamiento de OMVs por filtración y ultracentrifugación; pellet</li>
+          <li>Concentración por NTA y morfología por microscopía electrónica</li>
+          <li>Prueba de encapsulación</li>
+        </ul>
+    </section>
+    <section class="plan-panel" id="plan-p2" role="tabpanel" aria-labelledby="plan-t2">
+      <h3>La planta</h3>
+      <p class="fase-sub">condiciones gnotobióticas axénicas</p>
+<ul class="lista-check">
+          <li>Cultivo en condiciones gnotobióticas axénicas, libre de microorganismos verificables</li>
+          <li>Cuantificación de la colonización con nuestras bacterias</li>
+          <li>Detección de OMVs en floema y xilema, para verificar que lleguen al sistema vascular</li>
+          <li>Control 3: recuento de UFC con marcador fluorescente (GFP) cada cierta cantidad de días</li>
+        </ul>
+        <p class="nota">Resultado esperado: una curva de UFC creciendo de forma exponencial en el
+        tiempo, contra una planta wild sin tratamiento.</p>
+    </section>
+    <section class="plan-panel" id="plan-p3" role="tabpanel" aria-labelledby="plan-t3">
+      <h3>El insecto</h3>
+      <p class="fase-sub">entrada efectiva y silenciamiento de BicC</p>
+<p>Se estudia el silenciamiento del gen BicC y la entrada efectiva de bacterias y
+        vesículas al sistema del insecto. Los grupos de plantas del control 4, más una variante opcional:</p>
+        <ol class="grupos">
+          <li>Wild type</li>
+          <li>Inoculadas con Az39 sin transformar (sin maquinaria para ARNi)</li>
+          <li>Inoculadas con Az39 capaz de formar OMVs pero sin ARNdc</li>
+          <li>Inoculadas con Az39 con un ARNdc distinto de BicC, que sabemos que no daña a la chicharrita</li>
+          <li>Inoculadas con Az39 con ARNdc libre de BicC <em>(variante opcional)</em></li>
+          <li>Planta con Az39 completa</li>
+        </ol>
+    </section>
+    <section class="plan-panel" id="plan-p4" role="tabpanel" aria-labelledby="plan-t4">
+      <h3>Bioseguridad</h3>
+      <p class="fase-sub">verificaciones de efectos no deseados</p>
+<ul class="lista-check">
+          <li>Verificaciones off-target con abejas, humanos y maíz</li>
+          <li>Verificaciones de persistencia ambiental</li>
+          <li>Verificaciones respecto a la normativa argentina para microorganismos modificados</li>
+        </ul>
+    </section>
+    </div>
+  </div>
+
+  <div class="aplicacion abiertas reveal">
+    <h3>Lo que este diseño todavía tiene que responder</h3>
+    <p>Cuatro preguntas que el trabajo deja planteadas y que son, en realidad, el programa de
+    trabajo que sigue:</p>
+    <ul class="lista-check">
+      <li><strong>Dosis.</strong> Cuánto ARNdc entra por vesícula y cuánto hace falta para silenciar
+      BicC en el insecto.</li>
+      <li><strong>Persistencia.</strong> Si la bacteria se mantiene en el tejido vascular durante
+      toda la campaña sin perder el plásmido.</li>
+      <li><strong>Estabilidad.</strong> Cuánto resiste el ARNdc fuera de la vesícula y en el
+      ambiente.</li>
+      <li><strong>Especificidad.</strong> Que el ARNdc elegido no tenga blancos accidentales en
+      abejas, humanos ni en el propio maíz.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ================= 06 OPEN SIFI ================= -->
+<section class="section section--dark sifi" id="sifi" data-paso="sifi">
+  <div class="seccion-head reveal">
+    <p class="label">Herramienta</p>
+    <h2>Open Sifi agent</h2>
+    <p class="intro">
+      Todo lo que hay arriba se puede discutir en una mesa. El problema es que una corrida de
+      off-target contra un transcriptoma entero no se discute a mano: son millones de
+      alineamientos. Para eso hay dos piezas: <strong>siFi Desk</strong>, el escritorio donde se
+      corre el análisis y se leen los resultados, y <strong>Open Sifi agent</strong>, el agente
+      que opera las mismas herramientas en lenguaje natural. Las dos quedan abiertas.
+    </p>
+  </div>
+
+  <div class="sifi-grid">
+    <article class="sifi-card reveal">
+      <h3>Qué hace</h3>
+      <ul class="lista-check">
+        <li>Diseño de siRNAs con ventanas deslizantes sobre el ARNm diana</li>
+        <li>Búsqueda de off-target con mismatches configurables (0 a 3)</li>
+        <li>Paneles de genomas: cultivo, humano, polinizadores, simbiontes</li>
+        <li>Scoring de eficiencia, riesgo y especificidad, con desglose por criterio</li>
+        <li>Informes en PDF con la metodología y la versión del scoring usada</li>
+      </ul>
+    </article>
+
+    <article class="sifi-card reveal" data-delay="1">
+      <h3>Cómo está pensado</h3>
+      <ul class="lista-check">
+        <li>Corre local: los datos no salen de la máquina</li>
+        <li>Todo comando pasa por una política de permisos y una jaula de aislamiento</li>
+        <li>Cada corrida deja su carpeta con parámetros, resultados y logs</li>
+        <li>Un agente en lenguaje natural que opera las mismas herramientas que usarías a mano</li>
+        <li>Sin cajas negras: se puede leer cada paso y repetirlo</li>
+      </ul>
+    </article>
+
+    <article class="sifi-card destacado reveal" data-delay="2">
+      <h3>Por qué abierto</h3>
+      <p>Porque una herramienta que decide qué secuencia se prueba en un cultivo tiene que poder
+      auditarse. Si el criterio de selección no se puede leer, no es ciencia: es una caja con una
+      luz verde.</p>
+    </article>
+  </div>
+
+  <div class="sifi-flujo reveal">
+    <div class="paso"><span>01</span><p>Secuencia diana</p></div>
+    <div class="paso"><span>02</span><p>Candidatos</p></div>
+    <div class="paso"><span>03</span><p>Off-target</p></div>
+    <div class="paso"><span>04</span><p>Scoring</p></div>
+    <div class="paso"><span>05</span><p>Informe</p></div>
+  </div>
+
+  <div class="sifi-enlaces reveal">
+    <div>
+      <h3>El proyecto completo, abierto</h3>
+      <p>La última versión desarrollada, con el escritorio, el agente y la documentación:
+      código fuente, instalador y paneles de ejemplo. Versión del 30 de octubre de 2026.</p>
+    </div>
+    <a class="btn btn--dorado" href="https://github.com/MegaterioPampeano/sifi-desk"
+       target="_blank" rel="noopener">Ver el código en GitHub <span aria-hidden="true">↗</span></a>
+  </div>
+
+  <figure class="capturas reveal">
+    <div class="captura-ventana">
+      <div class="captura-barra" aria-hidden="true">
+        <span></span><span></span><span></span><em>siFi Desk · Resultados</em>
+      </div>
+      <img src="assets/img/sifi-resultados.jpg"
+           srcset="assets/img/sifi-resultados.jpg 1280w, assets/img/sifi-resultados@2x.jpg 2560w"
+           sizes="(max-width: 1240px) 92vw, 1120px"
+           alt="Pantalla de resultados de siFi Desk: corrida sobre BicC_Dm con 2.353 candidatos"
+           loading="lazy" width="1280" height="699">
+    </div>
+    <figcaption>
+      <strong>siFi Desk</strong>, con una corrida real sobre <strong>BicC_Dm</strong> y sin
+      mismatches permitidos: <strong>2.353
+      candidatos</strong>, de los cuales <strong>182</strong> quedan recomendados, el mejor con
+      96,9 sobre 100 y sólo 4 con off-target. Cada fila se puede abrir y ver de dónde sale su
+      puntaje. <button class="zoom" data-img="assets/img/sifi-resultados@2x.jpg">Ampliar</button>
+    </figcaption>
+  </figure>
+</section>
+
+<!-- ================= 07 FUENTES ================= -->
+<section class="section referencias" id="fuentes">
+  <div class="seccion-head reveal">
+    <p class="label">Referencias</p>
+    <h2>Referencias</h2>
+    <p class="intro">
+      Los documentos que sostienen cada cifra, de la fuente técnica a la prensa.
+    </p>
+  </div>
+
+  <ol class="ref-lista reveal">
+    <li class="ref">
+      <a href="https://www.magyp.gob.ar/intranet/_pdf/informe_a4._tecnico_sobre_la_enfermedad_del_achaparramiento_del_maiz_digital.pdf" target="_blank" rel="noopener">
+        <span class="ref-num">01</span>
+        <span class="ref-cuerpo">
+          <span class="ref-titulo">Informe técnico sobre la enfermedad del achaparramiento del maíz</span>
+          <span class="ref-meta">Ministerio de Agricultura, Ganadería y Pesca · 2024</span>
+          <span class="ref-dato">Pérdidas, superficie y evolución de la campaña 2023/24</span>
+        </span>
+        <span class="ref-fuente">magyp.gob.ar ↗</span>
+      </a>
+    </li>
+    <li class="ref">
+      <a href="https://www.argentina.gob.ar/inta/achaparramiento-del-maiz/red-nacional-de-monitoreo-informes" target="_blank" rel="noopener">
+        <span class="ref-num">02</span>
+        <span class="ref-cuerpo">
+          <span class="ref-titulo">Red Nacional de Trampas de Monitoreo de la chicharrita del maíz</span>
+          <span class="ref-meta">INTA · informes periódicos</span>
+          <span class="ref-dato">21 informes, ~500 trampas y 14 provincias entre mayo de 2024 y junio de 2025</span>
+        </span>
+        <span class="ref-fuente">argentina.gob.ar/inta ↗</span>
+      </a>
+    </li>
+    <li class="ref">
+      <a href="https://www.maizar.org.ar/vertodas_area.php?id=39" target="_blank" rel="noopener">
+        <span class="ref-num">03</span>
+        <span class="ref-cuerpo">
+          <span class="ref-titulo">Red Nacional de Monitoreo Dalbulus maidis</span>
+          <span class="ref-meta">Maizar, junto a Aapresid, CREA, INTA y otras instituciones</span>
+          <span class="ref-dato">Informes de la red y contexto de campaña</span>
+        </span>
+        <span class="ref-fuente">maizar.org.ar ↗</span>
+      </a>
+    </li>
+    <li class="ref">
+      <a href="https://www.argentina.gob.ar/inta/achaparramiento-del-maiz" target="_blank" rel="noopener">
+        <span class="ref-num">04</span>
+        <span class="ref-cuerpo">
+          <span class="ref-titulo">Achaparramiento del maíz: manejo y monitoreo</span>
+          <span class="ref-meta">INTA · programa nacional</span>
+          <span class="ref-dato">Recomendaciones de manejo y control químico como complemento</span>
+        </span>
+        <span class="ref-fuente">argentina.gob.ar/inta ↗</span>
+      </a>
+    </li>
+    <li class="ref">
+      <a href="https://www.aapresid.org.ar/es/novedades/68d1bb6c379fe5caf649908f" target="_blank" rel="noopener">
+        <span class="ref-num">05</span>
+        <span class="ref-cuerpo">
+          <span class="ref-titulo">Chicharrita: ¿una plaga del pasado?</span>
+          <span class="ref-meta">Aapresid · novedades</span>
+          <span class="ref-dato">Balanza de la campaña 2023/24 y estimación de pérdidas</span>
+        </span>
+        <span class="ref-fuente">aapresid.org.ar ↗</span>
+      </a>
+    </li>
+    <li class="ref">
+      <a href="https://www.bcr.com.ar/es/mercados/investigacion-y-desarrollo" target="_blank" rel="noopener">
+        <span class="ref-num">06</span>
+        <span class="ref-cuerpo">
+          <span class="ref-titulo">Investigación y desarrollo · informes de coyuntura</span>
+          <span class="ref-meta">Bolsa de Comercio de Rosario</span>
+          <span class="ref-dato">Estimaciones sucesivas de pérdida y superficie</span>
+        </span>
+        <span class="ref-fuente">bcr.com.ar ↗</span>
+      </a>
+    </li>
+    <li class="ref">
+      <a href="https://www.bccba.com.ar/" target="_blank" rel="noopener">
+        <span class="ref-num">07</span>
+        <span class="ref-cuerpo">
+          <span class="ref-titulo">Bolsa de Cereales de Córdoba</span>
+          <span class="ref-meta">Estimación de impacto económico de la campaña 2023/24</span>
+          <span class="ref-dato">US$ 5.700 M, en conjunto con la caída de precios</span>
+        </span>
+        <span class="ref-fuente">bccba.com.ar ↗</span>
+      </a>
+    </li>
+    <li class="ref">
+      <a href="https://www.clarin.com/rural/frio-achico-chicharrita-maiz-parada-region-encarar-siembra_0_tpq5DqO2jb.html" target="_blank" rel="noopener">
+        <span class="ref-num">08</span>
+        <span class="ref-cuerpo">
+          <span class="ref-titulo">El frío achicó a la chicharrita del maíz</span>
+          <span class="ref-meta">Clarín Rural</span>
+          <span class="ref-dato">Estado de la plaga y perspectiva para la siembra siguiente</span>
+        </span>
+        <span class="ref-fuente">clarin.com ↗</span>
+      </a>
+    </li>
+    <li class="ref">
+      <a href="https://www.eeaoc.org.ar/" target="_blank" rel="noopener">
+        <span class="ref-num">09</span>
+        <span class="ref-cuerpo">
+          <span class="ref-titulo">Estación Experimental Agroindustrial Obispo Colombres</span>
+          <span class="ref-meta">EEAOC · Tucumán</span>
+          <span class="ref-dato">Ensayos de control foliar y curasemillas</span>
+        </span>
+        <span class="ref-fuente">eeaoc.org.ar ↗</span>
+      </a>
+    </li>
+    <li class="ref">
+      <a href="https://www.embrapa.br/" target="_blank" rel="noopener">
+        <span class="ref-num">10</span>
+        <span class="ref-cuerpo">
+          <span class="ref-titulo">Embrapa · maíz y cigarrinha</span>
+          <span class="ref-meta">Embrapa (Brasil)</span>
+          <span class="ref-dato">Advertencias sobre insecticidas y organismos benéficos</span>
+        </span>
+        <span class="ref-fuente">embrapa.br ↗</span>
+      </a>
+    </li>
+    <li class="ref">
+      <a href="https://www.epa.gov/pesticides/biopesticides" target="_blank" rel="noopener">
+        <span class="ref-num">11</span>
+        <span class="ref-cuerpo">
+          <span class="ref-titulo">Bioplaguicidas y registro de ARN de interferencia</span>
+          <span class="ref-meta">Environmental Protection Agency (EPA)</span>
+          <span class="ref-dato">El primer ARNdc rociable se registró en diciembre de 2023</span>
+        </span>
+        <span class="ref-fuente">epa.gov ↗</span>
+      </a>
+    </li>
+  </ol>
+
+  <details class="fuentes-extra reveal">
+    <summary>
+      <span class="fx-sum">Fuentes adicionales</span>
+      <span class="fx-cuenta">15 documentos</span>
+    </summary>
+    <ul class="fx-lista">
+      <li>
+        <a href="https://www.jove.com/t/57390/double-stranded-rna-oral-delivery-methods-to-induce-rna-interference" target="_blank" rel="noopener">
+          <span class="fx-titulo">Double-stranded RNA oral delivery methods to induce RNA interference in phloem and plant-sap-feeding hemipteran insects</span>
+          <span class="fx-meta">Journal of Visualized Experiments · 2018</span>
+          <span class="fx-fuente">jove.com ↗</span>
+        </a>
+      </li>
+      <li>
+        <a href="https://fibroblast.crbs.ucsd.edu/images/12653" target="_blank" rel="noopener">
+          <span class="fx-titulo">Banco de imágenes de células del CRBS</span>
+          <span class="fx-meta">University of California, San Diego · imágenes de referencia</span>
+          <span class="fx-fuente">fibroblast.crbs.ucsd.edu ↗</span>
+        </a>
+      </li>
+      <li>
+        <a href="https://digital.cic.gba.gob.ar/items/87d77ccc-71cc-4c9b-b7b5-cf976374f564/full" target="_blank" rel="noopener">
+          <span class="fx-titulo">Bacteriomas de Dalbulus maidis y su simbionte Sulcia</span>
+          <span class="fx-meta">Comisión de Investigaciones Científicas de la provincia de Buenos Aires (CIC)</span>
+          <span class="fx-fuente">digital.cic.gba.gob.ar ↗</span>
+        </a>
+      </li>
+      <li>
+        <a href="https://cgc.umn.edu/strain/HT115(DE3)" target="_blank" rel="noopener">
+          <span class="fx-titulo">Strain HT115 (DE3): genotipo y notas de uso</span>
+          <span class="fx-meta">Caenorhabditis Genetics Center (CGC), University of Minnesota</span>
+          <span class="fx-fuente">cgc.umn.edu ↗</span>
+        </a>
+      </li>
+      <li>
+        <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC11375590/" target="_blank" rel="noopener">
+          <span class="fx-titulo">Optimizing dsRNA engineering strategies and production in E. coli HT115 (DE3)</span>
+          <span class="fx-meta">Journal of Industrial Microbiology and Biotechnology · 2024</span>
+          <span class="fx-fuente">pmc.ncbi.nlm.nih.gov ↗</span>
+        </a>
+      </li>
+      <li>
+        <a href="https://academic.oup.com/jimb/article/doi/10.1093/jimb/kuae028/7734768" target="_blank" rel="noopener">
+          <span class="fx-titulo">Optimizing dsRNA engineering strategies and production in E. coli HT115 (DE3) — versión del editor</span>
+          <span class="fx-meta">Oxford Academic · 2024</span>
+          <span class="fx-fuente">academic.oup.com ↗</span>
+        </a>
+      </li>
+      <li>
+        <a href="https://lifescience-market.com/ht115-de3-escherichia-coli-strains-p-64162.html" target="_blank" rel="noopener">
+          <span class="fx-titulo">Cepa HT115 (DE3) de Escherichia coli: ficha comercial</span>
+          <span class="fx-meta">Life Science Market</span>
+          <span class="fx-fuente">lifescience-market.com ↗</span>
+        </a>
+      </li>
+      <li>
+        <a href="https://modelorg-ab.creative-biolabs.com/ht115-de3-competent-cells-mofy-0822-fy510-434218.htm" target="_blank" rel="noopener">
+          <span class="fx-titulo">HT115 (DE3) competent cells (MOFY-0822-FY510)</span>
+          <span class="fx-meta">Creative Biolabs</span>
+          <span class="fx-fuente">creative-biolabs.com ↗</span>
+        </a>
+      </li>
+      <li>
+        <a href="https://repositorioslatinoamericanos.uchile.cl/items/8aee2d4e-2aee-4680-b317-28eb467f3e82" target="_blank" rel="noopener">
+          <span class="fx-titulo">Diseño y construcción de un vector de dsRNA tipo hairpin expresado en E. coli HT115 (DE3) contra WSSV en camarón</span>
+          <span class="fx-meta">Tesis · Centro de Investigaciones Biológicas del Noroeste (México)</span>
+          <span class="fx-fuente">uchile.cl ↗</span>
+        </a>
+      </li>
+      <li>
+        <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC4810840/" target="_blank" rel="noopener">
+          <span class="fx-titulo">Symbiont-mediated RNA interference in insects</span>
+          <span class="fx-meta">Proceedings of the Royal Society B</span>
+          <span class="fx-fuente">pmc.ncbi.nlm.nih.gov ↗</span>
+        </a>
+      </li>
+      <li>
+        <a href="https://onlinelibrary.wiley.com/doi/10.1111/jipb.13848" target="_blank" rel="noopener">
+          <span class="fx-titulo">Spray-induced gene silencing to control plant pathogenic fungi: a step-by-step guide</span>
+          <span class="fx-meta">Journal of Integrative Plant Biology · 2025</span>
+          <span class="fx-fuente">onlinelibrary.wiley.com ↗</span>
+        </a>
+      </li>
+      <li>
+        <a href="https://sedici.unlp.edu.ar/bitstream/handle/10915/193093/Documento_completo.pdf?sequence=1" target="_blank" rel="noopener">
+          <span class="fx-titulo">Optimización de la técnica de ARN de interferencia en Edessa meditabunda, chinche plaga del cultivo de soja</span>
+          <span class="fx-meta">Trabajo final · Universidad Nacional de La Plata (SEDICI)</span>
+          <span class="fx-fuente">sedici.unlp.edu.ar ↗</span>
+        </a>
+      </li>
+      <li>
+        <a href="https://pubmed.ncbi.nlm.nih.gov/35442515/" target="_blank" rel="noopener">
+          <span class="fx-titulo">Development of efficient RNAi methods in the corn leafhopper Dalbulus maidis</span>
+          <span class="fx-meta">PubMed · 2022</span>
+          <span class="fx-fuente">pubmed.ncbi.nlm.nih.gov ↗</span>
+        </a>
+      </li>
+      <li>
+        <a href="https://pubmed.ncbi.nlm.nih.gov/19837076/" target="_blank" rel="noopener">
+          <span class="fx-titulo">Mechanisms of dsRNA uptake in insects and potential of RNAi for pest control: a review</span>
+          <span class="fx-meta">PubMed · 2010</span>
+          <span class="fx-fuente">pubmed.ncbi.nlm.nih.gov ↗</span>
+        </a>
+      </li>
+      <li>
+        <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC10968014/" target="_blank" rel="noopener">
+          <span class="fx-titulo">RNA interference in insects: from a natural mechanism to a biotechnological crop protection promise</span>
+          <span class="fx-meta">PMC</span>
+          <span class="fx-fuente">pmc.ncbi.nlm.nih.gov ↗</span>
+        </a>
+      </li>
+    </ul>
+  </details>
+
+</section>
+
+</main>
+
+<footer class="footer pie">
+  <div class="pie-info">
+    <p><strong>Silenciar BicC</strong> · Investigathón 2026</p>
+    <p class="nota">Trabajo de estudiantes sobre una propuesta de ARNi entregado por vesículas
+    de <em>Azospirillum brasilense</em> para silenciar BicC en <em>Dalbulus maidis</em>.</p>
+  </div>
+  <div class="pie-fin">
+    <a class="pie-arriba" href="#inicio">Volver arriba ↑</a>
+    <span class="pie-version">versión 1410 · 30/10</span>
+    <a class="pie-arriba" href="sitio.zip" download>Descargar el sitio (.zip)</a>
+    <a class="pie-arriba" href="nueva/">Ver la versión nueva →</a>
+  </div>
+</footer>
+
+<div class="lightbox" id="lightbox" aria-hidden="true">
+  <button class="lightbox-cerrar" aria-label="Cerrar">✕</button>
+  <img alt="">
+</div>
+
+<script src="assets/js/app.js?v=3"></script>
+</body>
+</html>
